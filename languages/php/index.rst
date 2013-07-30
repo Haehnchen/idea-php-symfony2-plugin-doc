@@ -91,13 +91,10 @@ Doctrine
   $em->getRepository('<FooBundle:Entity>')->findAll();
 
 * ``type`` - Return Entity or Entity[]
-
-.. note::
-  All ``find*`` need the parameter before ``'<FooBundle:Entity>'`` to know their types
   
 .. code-block:: php
 
-  #\Doctrine\Common\Persistence\ObjectManager::find
+  # Doctrine\Common\Persistence\ObjectManager::find
   $em->find('opwocoAppadminCrmBundle:Invite', 1) ;
   
 * ``type`` - Return Entity
@@ -149,4 +146,45 @@ Routing
 
 * ``goto`` - Controller action method
 * ``complete`` - Controller names of Bundle structure or controller services as shortcut 
+
+ 
+Forms
+-------------------------
+
+.. code-block:: php
+
+  # Symfony\Component\Form\FormBuilderInterface::add
+  $builder->add('field', '<complete>');
+  
+* ``complete`` - Registered FormTypes aliases
+ 
+.. code-block:: php
+  
+  # Symfony\Component\Form\FormBuilderInterface::add
+  $builder->add('field', 'button' , array(
+    'label' => '<translation_key>',
+    'help_inline' => '<translation_key>',
+    'help_block' => '<translation_key>',
+    'translation_domain' => '<translation_domain>',
+  ));
+
+* ``goto`` - Translation definition
+* ``complete`` - Translation key or domain 
+
+.. code-block:: php
+  
+  # Symfony\Component\OptionsResolver\OptionsResolverInterface::setDefaults
+  $resolver->setDefaults(array(
+    'data_class' => '<entity_class>'
+  ));
+  
+  # Symfony\Component\Form\FormBuilderInterface::add
+  $builder->add('field', 'button' , array(
+    'class' => '<entity_class>'
+  ));
+
+* ``goto`` - Class definition
+* ``complete`` - Class name of doctrine namespaced entities
+
+  
   
