@@ -8,3 +8,4 @@ Symfony2 PhpStorm Plugin Documentation
   languages/twig/index
   languages/yaml/index
   languages/xml/index
+  extension/method_parameter
