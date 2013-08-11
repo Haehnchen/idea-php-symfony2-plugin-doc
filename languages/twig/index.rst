@@ -65,14 +65,19 @@ Functions / Macros
   {% set var_name = 'Foo' %}
   {{ <var_name> }}
   
+Extension
+-------------------------
+  
 .. code-block:: html+jinja 
 
   {{ <Twig_Function_Method()> }}
   {{ <Twig_Function_Node()> }}  
   {{ <Twig_SimpleFunction()> }}
-
   
-based on ``Twig_ExtensionInterface`` and simple regular expression  
+based on ``Twig_ExtensionInterface`` and simple regular expression
+  
+* ``goto`` - Php function or method
+* ``complete`` - twig extension name 
   
 Filter
 -------------------------
@@ -125,6 +130,14 @@ Translation
   
 * ``goto`` - Yaml Key-Value of Domain, default ``messages`` or ``trans_default_domain`` of current file 
 * ``complete`` - All known translation key filtered by domain name  
+
+.. code-block:: html+jinja
+
+  {% trans_default_domain <Domain> %}
+  
+* ``goto`` - Translation domain file
+* ``complete`` - Registered translation domains
+
   
 Routing
 -------------------------

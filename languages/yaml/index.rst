@@ -57,6 +57,16 @@ based on container and local file parser
       - [ <setContainer>, ... ]                
 
 * ``complete`` - Public methods of service class
+
+.. code-block:: yaml
+
+  services:
+    mopa_bootstrap.menu:
+      class: Knp\Menu\MenuItem
+      factory_service: annotation_reader
+      factory_method: createFoo
+    
+* ``complete`` - factory_method and factory_service    
                 
 Routing
 -------------------------

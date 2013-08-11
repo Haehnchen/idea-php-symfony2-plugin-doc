@@ -16,6 +16,10 @@ Templates
         
 based on ``BundleInterface``, ``addPath`` of container and custom path of settings
 
+* ``goto`` - Template file
+* ``complete`` - Template names  
+* ``annotator`` - Mark missing template and provides twig template create action
+
 .. code-block:: php
 
 	/**
@@ -32,7 +36,7 @@ based on ``BundleInterface``, ``addPath`` of container and custom path of settin
 
 * ``goto`` - Template on click of ``@Template``
 * ``complete`` - Template names  
-* ``annotator`` - Mark missign template and provides twig template create action
+* ``annotator`` - Mark missing template and provides twig template create action
 
 .. code-block:: php
 
