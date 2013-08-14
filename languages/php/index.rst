@@ -190,5 +190,14 @@ Forms
 * ``goto`` - Class definition
 * ``complete`` - Class name of doctrine namespaced entities
 
+.. code-block:: php
+
+  # Symfony\Component\Form\FormBuilderInterface::add
+  $builder->add('field', 'button' , array(
+    '<option>' => ''
+  ));
+
+* ``goto`` - tagged form extension with ``form.type_extension`` or ``getParent`` tree of known form_type
+* ``complete`` - name for option
   
   
