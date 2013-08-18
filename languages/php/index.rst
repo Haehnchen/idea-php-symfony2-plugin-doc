@@ -160,6 +160,7 @@ Forms
   # Symfony\Component\Form\FormBuilderInterface::add
   $builder->add('field', '<complete>');
   
+* ``goto`` - resolved class
 * ``complete`` - Registered FormTypes aliases
  
 .. code-block:: php
@@ -175,6 +176,9 @@ Forms
 * ``goto`` - Translation definition
 * ``complete`` - Translation key or domain 
 
+.. note::
+  also ``translation_domain`` inside ``OptionsResolverInterface::setDefaults`` is supported for filter
+
 .. code-block:: php
   
   # Symfony\Component\OptionsResolver\OptionsResolverInterface::setDefaults
@@ -183,7 +187,7 @@ Forms
   ));
   
   # Symfony\Component\Form\FormBuilderInterface::add
-  $builder->add('field', 'button' , array(
+  $builder->add('field', 'form_alias'|FormTypeInterface, array(
     'class' => '<entity_class>'
   ));
 
@@ -193,11 +197,25 @@ Forms
 .. code-block:: php
 
   # Symfony\Component\Form\FormBuilderInterface::add
-  $builder->add('field', 'button' , array(
+  $builder->add('field', 'form_alias'|FormTypeInterface, array(
     '<option>' => ''
   ));
 
 * ``goto`` - tagged form extension with ``form.type_extension`` or ``getParent`` tree of known form_type
 * ``complete`` - name for option
+
+.. code-block:: php
   
+  # Symfony\Component\OptionsResolver\OptionsResolverInterface::setDefaults
+  $resolver->setDefaults(array(
+    '<form_options|form_extensions>' => ''
+  ));
+  
+  # Symfony\Component\Form\FormBuilderInterface::add
+  $builder->add('field', 'form_alias'|FormTypeInterface, array(
+    '<form_options|form_type_options|form_extensions>' => ''
+  ));  
+  
+* ``goto`` - array definition of option
+* ``complete`` - all matched form options
   

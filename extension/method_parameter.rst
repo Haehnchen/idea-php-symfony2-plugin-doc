@@ -49,9 +49,9 @@ Hash Tags
 * ``goto`` - known string in #<Provider>
 * ``complete`` -  when support by #<Provider>      
         
-supported ``Entity``, ``Service``, ``Service``, ``Template``, ``Route``, ``Class``, ``TranslationKey`` , ``TranslationDomain``
+supported ``Entity``, ``Service``, ``FormType``, ``Template``, ``Route``, ``Class``, ``TranslationKey`` , ``TranslationDomain``, ``FormOption``
 
 .. note::
-  TranslationKey are filtered on a TranslationDomain parameter, when provided else fallback to `messages`
+  TranslationKey are filtered on a TranslationDomain parameter, when provided else fallback to ``messages``
   You should better use defined parameter on signatures which are docblock independent
   

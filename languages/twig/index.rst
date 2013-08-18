@@ -16,6 +16,10 @@ Templates
   
 based on ``BundleInterface``, ``addPath`` of container and custom path of settings
 
+* ``goto`` - open file
+* ``complete`` - template names 
+* ``annotator`` - Notice missing template and create action
+
 .. code-block:: html+jinja
 
   {% string '<template.html.twig>' %}

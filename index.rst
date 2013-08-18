@@ -11,7 +11,7 @@ Symfony2 PhpStorm Plugin Documentation
 
 
 Navigation
-==================
+======================
 
 .. toctree::
   :glob:
