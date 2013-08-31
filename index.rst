@@ -21,3 +21,4 @@ Navigation
   languages/yaml/index
   languages/xml/index
   extension/method_parameter
+  extension/signature_type  

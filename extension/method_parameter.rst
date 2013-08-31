@@ -49,7 +49,7 @@ Hash Tags
 * ``goto`` - known string in #<Provider>
 * ``complete`` -  when support by #<Provider>      
         
-supported ``Entity``, ``Service``, ``FormType``, ``Template``, ``Route``, ``Class``, ``TranslationKey`` , ``TranslationDomain``, ``FormOption``
+supported ``Entity``, ``Service``, ``FormType``, ``Template``, ``Route``, ``Class``, ``TranslationKey`` , ``TranslationDomain``, ``FormOption``, ``Interface``
 
 .. note::
   TranslationKey are filtered on a TranslationDomain parameter, when provided else fallback to ``messages``
