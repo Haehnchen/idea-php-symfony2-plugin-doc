@@ -73,6 +73,35 @@ Service / Parameter
   
 * ``complete`` - Defined parameter
   
+Container Builder
+-------------------------
+.. code-block:: php
+
+  # \Symfony\Component\DependencyInjection\Reference
+  new Reference('<service_name>');
+
+  # \Symfony\Component\DependencyInjection\Definition
+  new Definition('<class>');
+  
+  # \Symfony\Component\DependencyInjection\Alias
+  new Alias('<service_name>');
+  
+  # \Symfony\Component\DependencyInjection\ContainerBuilder::setAlias
+  $container->setAlias('alias', '<service_name>');
+  
+  # \Symfony\Component\DependencyInjection\ContainerBuilder::findDefinition
+  $container->findDefinition('<service_name>');
+  
+  # \Symfony\Component\DependencyInjection\ContainerBuilder::hasDefinition
+  $container->hasDefinition('<service_name>');
+
+  # \Symfony\Component\DependencyInjection\ContainerBuilder::getDefinition
+  $container->getDefinition('<service_name>');    
+  
+  # \Symfony\Component\DependencyInjection\ContainerBuilder::findTaggedServiceIds
+  $container->findTaggedServiceIds('<tag>');    
+
+  
 Doctrine
 -------------------------
   
