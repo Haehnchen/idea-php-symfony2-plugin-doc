@@ -99,7 +99,9 @@ Container Builder
   $container->getDefinition('<service_name>');    
   
   # \Symfony\Component\DependencyInjection\ContainerBuilder::findTaggedServiceIds
-  $container->findTaggedServiceIds('<tag>');    
+  $container->findTaggedServiceIds('<tag>');
+
+* ``goto`` - tags: all tagged services
 
   
 Doctrine

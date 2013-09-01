@@ -48,6 +48,7 @@ based on container and local file parser
       - { name: <tag_name>, event: <event_name>, method: <method_name> }
 
 * ``complete`` - All known tags, events and public methods
+* ``goto`` - tags: all tagged services
 
 .. code-block:: yaml
 
