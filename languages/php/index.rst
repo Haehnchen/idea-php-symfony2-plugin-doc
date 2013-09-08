@@ -249,4 +249,21 @@ Forms
   
 * ``goto`` - array definition of option
 * ``complete`` - all matched form options
+
+
+EventDispatcher
+-------------------------
+.. code-block:: php
+
+  # Symfony\Component\EventDispatcher\EventSubscriberInterface::getSubscribedEvents
+  return array(
+    '<event_name>' => array()
+  );
+
+.. code-block:: php
+
+  # Symfony\Component\EventDispatcher\EventDispatcherInterface::dispatch
+  $this->get('event_dispatcher')->dispatch('<event_name>')  
   
+* ``goto`` - All class that use same event name
+* ``complete`` - Event name

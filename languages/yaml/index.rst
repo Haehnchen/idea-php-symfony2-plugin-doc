@@ -11,6 +11,8 @@ Global
   foo_bar: %<parameter>%
   foo_bar: @<service>
   foo_bar: <Class\Name>
+  foo_bar: <FooBundle:Template:name.html.twig>
+  foo_bar: <FooBundle:Template:name.php>
   
 .. note::
   goto where possible   
@@ -48,7 +50,7 @@ based on container and local file parser
       - { name: <tag_name>, event: <event_name>, method: <method_name> }
 
 * ``complete`` - All known tags, events and public methods
-* ``goto`` - tags: all tagged services
+* ``goto`` - tags: all tagged services or classes that also provide event name
 
 .. code-block:: yaml
 
@@ -58,6 +60,7 @@ based on container and local file parser
       - [ <setContainer>, ... ]                
 
 * ``complete`` - Public methods of service class
+* ``goto`` - Class method
 
 .. code-block:: yaml
 
