@@ -70,8 +70,19 @@ based on container and local file parser
       factory_service: annotation_reader
       factory_method: createFoo
     
-* ``complete`` - factory_method and factory_service    
-                
+* ``complete`` - factory_method and factory_service 
+   
+.. code-block:: yaml
+
+  services:
+    foo.bar:
+        class: Foo\Class
+        arguments: [@instance]        
+        calls:
+            - [ setContainer, [ @instance ] ]
+    
+* ``annotator`` - check method parameter instance 
+                   
 Routing
 -------------------------
 

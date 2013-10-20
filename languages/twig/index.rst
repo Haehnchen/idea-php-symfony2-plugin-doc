@@ -89,8 +89,11 @@ Filter
 
   {{ 'name'|<filter> }}
   
+* ``goto`` - Method or function of filter
+* ``complete`` - Twig_SimpleFilter, Twig_Filter_Function, Twig_Filter_Method inside `Twig_ExtensionInterface::getFilters`
+  
 .. note::
-  not supported by PhpStorm
+  not fully supported by PhpStorm, autocomplete dialog is a char type event
   
 Assets
 -------------------------
@@ -126,6 +129,7 @@ Translation
 
 * ``goto`` - Domain file like yaml or other, from container file
 * ``complete`` - Domain file like yaml or other, from container file
+* ``annotator`` - Mark missing domain files
   
 .. code-block:: html+jinja
 
@@ -134,6 +138,9 @@ Translation
   
 * ``goto`` - Yaml Key-Value of Domain, default ``messages`` or ``trans_default_domain`` of current file 
 * ``complete`` - All known translation key filtered by domain name  
+* ``annotator`` - Mark missing translation and provide quick fix, which create key inside domain file
+
+.. image:: phpstorm_translation_fix.png
 
 .. code-block:: html+jinja
 

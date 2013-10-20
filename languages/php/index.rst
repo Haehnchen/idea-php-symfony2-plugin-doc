@@ -149,6 +149,7 @@ Translation
 
 * ``goto`` - Domain file like yaml or other, from container file
 * ``complete`` - Domain file like yaml or other, from container file
+* ``annotator`` - Mark missing domain files
   
 .. code-block:: php
 
@@ -160,7 +161,7 @@ Translation
   
 * ``goto`` - Yaml Key-Value of Domain, default ``messages`` or ``trans_default_domain`` of current file 
 * ``complete`` - All known translation key filtered by domain name  
-
+* ``annotator`` - Mark missing translation and provide quick fix, which create key inside domain file
   
 Routing
 -------------------------
@@ -267,3 +268,17 @@ EventDispatcher
   
 * ``goto`` - All class that use same event name
 * ``complete`` - Event name
+
+
+Class
+-------------------------
+.. code-block:: php
+
+  class FlashListener implements EventSubscriberInterface {}  
+
+  
+.. image:: service_class_definition.png
+
+
+* ``lineMarker`` - Mark line and provide goto if a service is known definition
+* ``goto`` - class service definition
