@@ -4,6 +4,13 @@
 Twig
 ========================
 
+Variables
+-------------------------
+
+Support variables parser:
+- `Twig_Environment:addGlobal` of container file
+
+
 Templates
 -------------------------
 
@@ -160,6 +167,13 @@ Routing
 * ``goto`` - Controller action method
 * ``complete`` - Routing name out of eg. appDevUrlGenerator.php 
 * ``annotator`` - Mark missing routing name 
+
+.. code-block:: html+jinja
+
+  {{ path('_profiler', {'parameter': '') }}
+  
+* ``goto`` - Method parameter of matching controller method
+* ``complete`` - Method parameter
  
 .. code-block:: html+jinja
 
@@ -167,4 +181,36 @@ Routing
 
 * ``goto`` - Controller action method
 * ``complete`` - Controller names of Bundle structure or controller services 
+
+PhpTypes
+-------------------------
+
+.. image:: twig_phptype_completion.png
+
+.. code-block:: html+jinja
+
+  {% variable_name \Foo\Bar %}
+  {{ variable_name.method.subMethod }}
+  
+* ``goto`` - Class name or method
+* ``complete`` - class name or method with twig shortcut name and inside class name inside comment
+
+Possible Scopes
+
+.. code-block:: html+jinja
+
+  // block
+  {% block test %}
+    {# variable_name \Foo\Bar % #}
+  {% endblock %}
+  
+  // foreach
+  {% for ... %}
+    {# variable_name \Foo\Bar #}
+  {% endfor %}
+  
+  // file
+  {% extends ... %}
+  {# variable_name \Foo\Bar #}
+
   

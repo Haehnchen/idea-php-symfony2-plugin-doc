@@ -169,16 +169,16 @@ Routing
 .. code-block:: php
 
   # Symfony\Bundle\FrameworkBundle\Controller\Controller::generateUrl
-  $this->generateUrl('_configurator_final')
+  $this->generateUrl('_configurator_final', array('parameter' => 'test'))
   
-* ``goto`` - Controller action method
-* ``complete`` - Routing name out of eg. appDevUrlGenerator.php 
+* ``goto`` - Controller action method and parameter
+* ``complete`` - Routing name and parameter of eg. appDevUrlGenerator.php 
 * ``annotator`` - Mark missing routing name 
  
 .. code-block:: php
   
   # Symfony\Bundle\FrameworkBundle\Controller\Controller::forward
-  $this->forward('<controller_action>')
+  $this->forward('<controller_action>', array('parameter' => 'test'))
 
 * ``goto`` - Controller action method
 * ``complete`` - Controller names of Bundle structure or controller services as shortcut 
