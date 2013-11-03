@@ -189,13 +189,13 @@ PhpTypes
 
 .. code-block:: html+jinja
 
-  {% variable_name \Foo\Bar %}
+  {# variable_name \Foo\Bar #}
   {{ variable_name.method.subMethod }}
   
 * ``goto`` - Class name or method
 * ``complete`` - class name or method with twig shortcut name and inside class name inside comment
-
-Possible Scopes
+  
+Possible Variables Scopes
 
 .. code-block:: html+jinja
 
@@ -213,4 +213,57 @@ Possible Scopes
   {% extends ... %}
   {# variable_name \Foo\Bar #}
 
+Variable parser support controller as source, just definite it in root tree of twig file eg under extends tag
+
+.. code-block:: html+jinja
+
+  {# @controller FooBundle:Bar:index #}
+  {# @Controller FooBundle:BarFood:index #}
+  
+Controller also detect on twig path
+
+.. code-block:: html+jinja
+
+  // FooBundle/Resources/views/BarFood/index.html.twig
+  // FooBundle\BarFoodController\indexAction
+  
+Valid template variable detection in controller method
+
+.. code-block:: php
+
+	return $this->render('foo...', array(
+	  'form' => $editForm->createView(),
+	));
+
+	// and all other template render calls ...  
+	return $this->renderView('foo...', array(
+	  'form' => $editForm->createView(),
+	));
+  
+	$foo = array(
+	  'form' => $editForm->createView();
+	);
+
+	$foo['form'] = $editForm->createView();
+  
+	return $foo;
+	return $this->render('foo...', $foo);  
+  
+Array values
+
+.. code-block:: html+jinja 
+
+  {# entities \Foo\Bar[]
+  {% for entity in entities %}
+    {{ entity.completeMe }}
+  {% endfor %}
+  
+Whitelist for variable pattern
+
+.. code-block:: html+jinja 
+
+  {{ "entity" }}
+  {% for entity in "entities" %}
+  {% if "entity" > "entity" %}
+  {% set var = "entity" %}
   
