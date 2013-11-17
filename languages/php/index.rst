@@ -51,6 +51,8 @@ Service / Parameter
 
   # Symfony\Component\DependencyInjection\ContainerInterface::get
   $this->container->get('<service_name>');
+  $this->container->get(SERVICE::NAME);  
+  $this->container->get($this->name);  
 
 * ``goto`` - Goto service class
 * ``complete`` - Service name
