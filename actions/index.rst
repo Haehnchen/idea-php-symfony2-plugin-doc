@@ -1,0 +1,20 @@
+.. index::
+   single: Actions
+
+Actions
+========================
+
+Service Builder
+-------------------------
+.. image:: container_builder.png
+.. image:: container_builder_context.png
+
+.. code-block:: php
+
+  # Symfony\Bundle\FrameworkBundle\Controller\Controller::generateUrl
+  namespace Acme\FooBundle;
+  class Foo extends ContainerAware {}
+  class Foo {}
+  
+* ``action`` - Class definition name or context of yaml or yml
+

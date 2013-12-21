@@ -105,12 +105,16 @@ Container Builder
 
 * ``goto`` - tags: all tagged services
 
+.. note::
+  All ContainerBuilder calls provides access to service-index which includes private ones
   
 Doctrine
 -------------------------
   
 .. code-block:: php
 
+  $em->getRepository(Entity::class);
+  $em->getRepository($this->foo);
   $em->getRepository('<FooBundle:Entity>');
   
 * ``goto`` - Go to entity class
@@ -185,6 +189,15 @@ Routing
 * ``goto`` - Controller action method
 * ``complete`` - Controller names of Bundle structure or controller services as shortcut 
 
+.. code-block:: php
+  
+  # Symfony\Bundle\FrameworkBundle\Controller\Controller::forward
+  # Symfony\Bundle\FrameworkBundle\Controller\Controller::generateUrl
+  $this->generateUrl('<controller_action>', array('<parameter>' => 'test'))
+
+* ``goto`` - Method Parameter
+* ``complete`` - Parameters of route  
+ 
  
 Forms
 -------------------------
@@ -254,6 +267,27 @@ Forms
 * ``complete`` - all matched form options
 
 
+.. code-block:: php
+
+  # Symfony\Component\Form\FormFactory::create
+  # Symfony\Component\Form\FormFactory::createNamedBuilder
+  # Symfony\Bundle\FrameworkBundle\Controller\Controller::createForm
+  $this->createForm('button', "type", array(
+    '<option>' => 'foo'
+  ));  
+  
+* ``goto`` - array definition of option
+* ``complete`` - all matched form options
+
+.. note::
+  Types are resolve on parents and other condition
+
+.. code-block:: php
+  
+  # \Symfony\Component\Form\Form::get
+  # \Symfony\Component\Form\Form::has
+  $form->get('<foo>');
+  
 EventDispatcher
 -------------------------
 .. code-block:: php
@@ -284,3 +318,20 @@ Class
 
 * ``lineMarker`` - Mark line and provide goto if a service is known definition
 * ``goto`` - class service definition
+
+.. note::
+  Includes private services
+  
+Related Files
+------------------------- 
+
+Controller method provide related files popover as line marker
+
+.. code-block:: php
+
+	public function indexAction() {}
+
+.. image:: controller_method_related_files.png
+
+* ``lineMarker`` - Provide related file like routes and templates
+

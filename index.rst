@@ -22,3 +22,4 @@ Navigation
   languages/xml/index
   extension/method_parameter
   extension/signature_type  
+  actions/index
