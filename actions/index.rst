@@ -18,3 +18,9 @@ Service Builder
   
 * ``action`` - Class definition name or context of yaml or yml
 
+Profiler Statusbar
+-------------------------
+.. image:: profiler.png
+
+Search for profiler config in container folders and provide internal targets for related latest Requests.
+
