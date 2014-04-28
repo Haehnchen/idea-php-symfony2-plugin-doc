@@ -21,5 +21,6 @@ Navigation
   languages/yaml/index
   languages/xml/index
   extension/method_parameter
-  extension/signature_type  
+  extension/signature_type
+  extension/doctrine_querybuilder
   actions/index

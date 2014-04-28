@@ -5,7 +5,7 @@ Doctrine QueryBuilder
 ========================
 Provide return types for Method calls
 
-Roots Entity
+Root Entity
 -------------------------
 
 Every querybuilder object need to have a root entity, some provider are in
