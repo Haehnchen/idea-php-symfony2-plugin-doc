@@ -24,3 +24,14 @@ Profiler Statusbar
 
 Search for profiler config in container folders and provide internal targets for related latest Requests.
 
+Translation Extractor
+-------------------------
+
+.. code-block:: html+jinja
+
+  <div>foo</div>
+  <div title="foo"></div>
+
+.. image:: translation_extract_key_menu.png
+
+.. image:: translation_extract_key_action.png

@@ -30,7 +30,9 @@ Every querybuilder object need to have a root entity, some provider are in
     // inline
     $qb = $em->getRepository('FooBundle:FooEntity')->createQueryBuilder('foo')
     
-
+    // chaining
+    $qb = $this>getMyQueryBuilder()->addSelect('');
+    
 .. image:: querybuilder-select.png
 
 
@@ -57,3 +59,6 @@ Supported Calls
     $qb->orderBy('foo.bar');
     $qb->addOrderBy('foo.bar');    
 
+    $qb->where('foo.bar');
+    $qb->andWhere('foo.bar'); 
+    $qb->orWhere('foo.bar');
