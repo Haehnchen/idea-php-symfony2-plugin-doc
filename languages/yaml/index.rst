@@ -122,3 +122,32 @@ Doctrine
       
 .. note::
   and many more    
+  
+Config
+-------------------------  
+
+.. image:: symfony2_config_phpstorm.png
+
+Use command ``config:dump-reference`` to create per bundle file and merge them in the following way under project ``idea/symfony2-config.xml``. If you dont provide this file an internal fallback will occur.
+
+.. code-block:: xml
+
+  <config>
+
+    <!-- Namespace: http://symfony.com/schema/dic/symfony_extra -->
+    <sensio-framework-extra>
+      <router annotations="true" />
+      <request converters="true" />
+      <view annotations="true" />
+      <cache annotations="true" />
+      <security annotations="true" />
+    </sensio-framework-extra>
+  
+    <!-- Namespace: http://symfony.com/schema/dic/webprofiler -->
+    <web-profiler
+        toolbar="false"
+        position="bottom"
+        intercept-redirects="false"
+    />
+    
+  </config>
