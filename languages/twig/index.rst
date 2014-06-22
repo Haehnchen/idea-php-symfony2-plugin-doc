@@ -288,3 +288,12 @@ Pipes variable context from original include statement position
    {{ foo.method }}
    {{ entity.method }}
   
+Implements and Overwrites
+-----------------------------------
+
+- Macros from import
+- Twig include file
+- Block overwrites
+- Block implementations
+
+.. image:: twig_implementations.png
