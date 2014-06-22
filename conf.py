@@ -49,7 +49,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Symfony2 PhpStorm Plugin'
-copyright = u'2013, Daniel Espendiller'
+copyright = u'2014, Daniel Espendiller'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

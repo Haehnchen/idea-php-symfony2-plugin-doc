@@ -267,3 +267,24 @@ Whitelist for variable pattern
   {% if "entity" > "entity" %}
   {% set var = "entity" %}
   
+Include-Statement Context Variables
+
+Pipes variable context from original include statement position
+
+.. code-block:: html+jinja 
+
+  {% include 'template.html.twig' with {'foo': 'bar'} only %}
+  {% include 'template.html.twig' with {'foo': 'bar'} %}
+  {% include 'template.html.twig' %}
+  {% include 'template.html.twig' only %}
+  
+  {% for entity in entities %}
+    {% include 'template.html.twig' %}
+  {% endfor %}  
+  
+.. code-block:: html+jinja 
+
+   {# template.html.twig #}
+   {{ foo.method }}
+   {{ entity.method }}
+  
