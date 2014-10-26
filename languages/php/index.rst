@@ -136,7 +136,7 @@ Doctrine
 .. code-block:: php
 
   # Doctrine\Common\Persistence\ObjectManager::find
-  $em->find('opwocoAppadminCrmBundle:Invite', 1) ;
+  $em->find('FooBundle:Invite', 1) ;
   
 * ``type`` - Return Entity
 * ``goto`` - see above

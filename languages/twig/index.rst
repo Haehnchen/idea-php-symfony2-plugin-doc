@@ -189,7 +189,7 @@ PhpTypes
 
 .. code-block:: html+jinja
 
-  {# variable_name \Foo\Bar #}
+  {# @var variable_name \Foo\Bar #}
   {{ variable_name.method.subMethod }}
   
 * ``goto`` - Class name or method
@@ -201,19 +201,23 @@ Possible Variables Scopes
 
   // block
   {% block test %}
-    {# variable_name \Foo\Bar % #}
+    {# @var variable_name \Foo\Bar #}
   {% endblock %}
   
   // foreach
   {% for ... %}
-    {# variable_name \Foo\Bar #}
+    {# @var variable_name \Foo\Bar #}
   {% endfor %}
   
   // file
   {% extends ... %}
-  {# variable_name \Foo\Bar #}
+  {# @var variable_name \Foo\Bar #}
 
-Variable parser support controller as source, just definite it in root tree of twig file eg under extends tag
+  // macro
+  {% macro ... %}
+  {# @var variable_name \Foo\Bar #}  
+  
+Variable parser support controller as source, just define it in root tree of twig file eg under extends tag
 
 .. code-block:: html+jinja
 

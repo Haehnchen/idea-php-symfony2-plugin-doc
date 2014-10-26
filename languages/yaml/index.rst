@@ -97,7 +97,7 @@ Routing
 
 .. code-block:: yaml
 
-  opwoco_apptitan_admin:
+  foo_admin:
     resource: "<@FooBundle/Resources/config/routing.yml>"
     prefix:   /
 
