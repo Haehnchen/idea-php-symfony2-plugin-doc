@@ -25,9 +25,9 @@ Provides completion and got for method parameter values. configuration `Symfony2
     
 .. code-block:: php
 
-    # \Knp\Menu\ItemInterface:addChild:0:route:array_key
+    # \Knp\Menu\ItemInterface:addChild:1:route:array_key
     # Knp\Menu\ItemInterface::addChild
-    $menu->addChild('foor', '<entity>'('foo', array(
+    $menu->addChild('foo', array(
       '<route>' => '',
     ));  
         
