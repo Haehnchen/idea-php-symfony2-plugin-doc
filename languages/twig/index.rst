@@ -257,7 +257,7 @@ Array values
 
 .. code-block:: html+jinja 
 
-  {# entities \Foo\Bar[]
+  {# @var entities \Foo\Bar[] #}
   {% for entity in entities %}
     {{ entity.completeMe }}
   {% endfor %}
